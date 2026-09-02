@@ -55,7 +55,7 @@ export default function Index() {
   async function fetchPokemons() {
     try {
       const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon/?limit=20",
+        "https://pokeapi.co/api/v2/pokemon/?limit=20"
       );
       const data = await response.json();
 
@@ -69,7 +69,7 @@ export default function Index() {
             imageBack: details.sprites.back_shiny,
             types: details.types,
           };
-        }),
+        })
       );
 
       setPokemons(detailedPokemons);
